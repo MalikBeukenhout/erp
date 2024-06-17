@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4caf6d;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 250px; /* Adjust as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 14px 20px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #111;
+}
+
+main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    margin-left: 250px; /* Adjust according to sidebar width */
+}
+
+#message-box {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin: 10px 0;
+    display: none; /* hidden by default */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Toggle button styles */
+.toggle-btn {
+    font-size: 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: transparent; /* Set background to transparent */
+    color: white;
+    border: none;
+    padding: 10px;
+    z-index: 3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea {
+    margin-bottom: 10px;
+}
+
+form textarea {
+    resize: none;
+}
+
+form button {
+    width: 100px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar ul li {
+        font-size: 18px;
+    }
+}

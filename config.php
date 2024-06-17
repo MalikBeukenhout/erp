@@ -1,0 +1,23 @@
+<?php
+// config.php
+
+// Database connection
+$servername = "localhost";
+$username = "root"; // your database username
+$password = ""; // your database password
+$dbname = "erp_system"; // your database name
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Function to connect to the database
+function db_connect() {
+    global $conn;
+    return $conn;
+}
+?>
